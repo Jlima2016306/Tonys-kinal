@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.juliolima.controller.ProductosController">
+   <children>
+      <ImageView fitHeight="486.0" fitWidth="805.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondoEmpres.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtCodigoProducto" editable="false" layoutX="186.0" layoutY="90.0" prefHeight="25.0" prefWidth="120.0" />
+      <TextField fx:id="txtNombreProducto" editable="false" layoutX="186.0" layoutY="125.0" prefHeight="25.0" prefWidth="329.0" />
+      <TextField fx:id="txtCantidad" editable="false" layoutX="186.0" layoutY="161.0" prefHeight="25.0" prefWidth="329.0" promptText="00000" />
+      <Label layoutX="50.0" layoutY="91.0" text="Código Producto" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="126.0" text="Nombre Producto" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="161.0" text="Cantidad" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblProductos" layoutX="75.0" layoutY="205.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="178.0" prefWidth="630.0">
+        <columns>
+          <TableColumn fx:id="colCodigoProducto" prefWidth="126.0" text="Código Producto" />
+          <TableColumn fx:id="colNombreProducto" prefWidth="329.0" text="Nombre Producto" />
+            <TableColumn fx:id="colCantidad" prefWidth="174.0" text="Cantidad" />
+        </columns>
+      </TableView>
+      <Label layoutX="347.0" layoutY="24.0" text="PRODUCTOS" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="49.0" layoutY="410.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="28.0" prefWidth="110.0" text="NUEVO" />
+      <Button fx:id="btnEliminar" disable="true" layoutX="237.0" layoutY="410.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="28.0" prefWidth="110.0" text="ELIMINAR" />
+      <Button fx:id="btnEditar" disable="true" layoutX="435.0" layoutY="410.0" mnemonicParsing="false" onAction="#editar" prefHeight="28.0" prefWidth="110.0" text="EDITAR" />
+      <Button fx:id="btnReporte" disable="true" layoutX="615.0" layoutY="410.0" mnemonicParsing="false" onAction="#Rerporte" prefHeight="28.0" prefWidth="110.0" text="REPORTE" />
+      <ImageView fitHeight="89.0" fitWidth="96.0" layoutX="636.0" layoutY="49.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icono.PNG" />
+         </image>
+      </ImageView>
+      <Button layoutX="669.0" layoutY="27.0" mnemonicParsing="false" onAction="#menuPrincipal" prefHeight="62.0" prefWidth="63.0" text="Regresar" visible="false">
+         <font>
+            <Font name="Corbel" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

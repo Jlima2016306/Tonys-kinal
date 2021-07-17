@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.juliolima.controller.ServicioHasPlatoController">
+   <children>
+      <ImageView fitHeight="486.0" fitWidth="805.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondoEmpres.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodigoServicios" layoutX="261.0" layoutY="92.0" prefHeight="25.0" prefWidth="256.0" />
+      <ComboBox fx:id="cmbCodigoPlato" layoutX="262.0" layoutY="123.0" prefHeight="25.0" prefWidth="256.0" />
+      <Label layoutX="75.0" layoutY="92.0" prefHeight="24.0" prefWidth="180.0" text="Código  Servicios" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="123.0" text="Código Plato" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblServiciosHasPlatos" layoutX="75.0" layoutY="169.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="214.0" prefWidth="630.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicios" prefWidth="309.0" text="Código  Servicios" />
+          <TableColumn fx:id="colCodigoPlato" prefWidth="320.0" text="Código Plato" />
+        </columns>
+      </TableView>
+      <Label layoutX="282.0" layoutY="33.0" text="Servicios  has Platos" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="51.0" fitWidth="88.0" layoutX="682.0" layoutY="47.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icono.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

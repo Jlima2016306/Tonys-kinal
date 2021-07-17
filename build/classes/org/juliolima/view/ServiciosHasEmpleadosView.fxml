@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.juliolima.controller.ServicioHasEmpleadoController">
+   <children>
+      <ImageView fitHeight="486.0" fitWidth="805.0" layoutY="-1.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondoEmpres.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodigoServicio" layoutX="217.0" layoutY="77.0" prefHeight="25.0" prefWidth="263.0" />
+      <ComboBox fx:id="cmbCodigoEmpleados" layoutX="256.0" layoutY="113.0" prefHeight="25.0" prefWidth="224.0" />
+      <TextField fx:id="txtHoraEvento" editable="false" layoutX="146.0" layoutY="189.0" prefHeight="25.0" prefWidth="152.0" promptText="Horas:Minutos:Segundos" />
+      <TextField fx:id="txtLugarEvento" editable="false" layoutX="490.0" layoutY="189.0" prefHeight="25.0" prefWidth="152.0" />
+      <Label layoutX="52.0" layoutY="77.0" text="CodigoServicio" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="113.0" text="CodigoEmpleados" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="150.0" prefHeight="24.0" prefWidth="96.0" text="Fecha Evento" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="190.0" text="Hora Evento" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblServiciosHasEmpleados" layoutX="41.0" layoutY="234.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="154.0" prefWidth="709.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicio" prefWidth="157.0" text="Servicios_codigoServicio" />
+          <TableColumn fx:id="colCodigoEmpleado" prefWidth="185.0" text="Empleados_codigoEmpleados" />
+            <TableColumn fx:id="colFechaEvento" prefWidth="119.0" text="Fecha Evento" />
+            <TableColumn fx:id="colHoraEvento" prefWidth="124.0" text="Hora Evento" />
+            <TableColumn fx:id="colLugarEvento" prefWidth="123.0" text="Lugar Evento" />
+        </columns>
+      </TableView>
+      <Label layoutX="264.0" layoutY="27.0" text="SERVICIOS HAS EMPLEADOS" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="49.0" layoutY="410.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="28.0" prefWidth="110.0" text="NUEVO" />
+      <Button fx:id="btnEliminar" disable="true" layoutX="237.0" layoutY="410.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="28.0" prefWidth="110.0" text="ELIMINAR" />
+      <Button fx:id="btnEditar" disable="true" layoutX="435.0" layoutY="410.0" mnemonicParsing="false" onAction="#editar" prefHeight="28.0" prefWidth="110.0" text="EDITAR" />
+      <Button fx:id="btnReporte" disable="true" layoutX="615.0" layoutY="410.0" mnemonicParsing="false" onAction="#reporte" prefHeight="28.0" prefWidth="110.0" text="REPORTE" />
+      <ImageView fitHeight="53.0" fitWidth="100.0" layoutX="651.0" layoutY="41.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icono.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="379.0" layoutY="189.0" prefHeight="24.0" prefWidth="96.0" text="Lugar Evento" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="grpFechaEvento" layoutX="160.0" layoutY="148.0" prefHeight="28.0" prefWidth="155.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

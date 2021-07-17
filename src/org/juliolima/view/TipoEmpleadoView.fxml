@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.juliolima.controller.TipoEmpleadoController">
+   <children>
+      <ImageView fitHeight="476.0" fitWidth="763.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondoEmpres.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="135.0" layoutY="117.0" prefHeight="25.0" prefWidth="455.0" />
+      <TextField fx:id="txtCodigoTipoEmpleado" editable="false" layoutX="205.0" layoutY="77.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="36.0" layoutY="77.0" text="Código TipoEmpleado" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="118.0" text="Descripcion" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblTipoEmpleados" layoutX="37.0" layoutY="158.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="189.0" prefWidth="688.0">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="152.0" text="Código  TipoEmpleado" />
+          <TableColumn fx:id="colDescripcion" prefWidth="535.0" text="Descripcion" />
+        </columns>
+      </TableView>
+      <Label layoutX="304.0" layoutY="27.0" text="TIPO EMPLEADO" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="39.0" layoutY="354.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="62.0" prefWidth="133.0" text="NUEVO" />
+      <Button fx:id="btnEliminar" disable="true" layoutX="220.0" layoutY="354.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="62.0" prefWidth="133.0" text="ELIMINAR" />
+      <Button fx:id="btnEditar" disable="true" layoutX="402.0" layoutY="354.0" mnemonicParsing="false" onAction="#editar" prefHeight="62.0" prefWidth="139.0" text="EDITAR" />
+      <Button fx:id="btnReporte" disable="true" layoutX="586.0" layoutY="354.0" mnemonicParsing="false" onAction="#Reporte" prefHeight="62.0" prefWidth="139.0" text="REPORTE" />
+      <ImageView fitHeight="53.0" fitWidth="100.0" layoutX="656.0" layoutY="32.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icono.PNG" />
+         </image>
+      </ImageView>
+      <Button layoutX="669.0" layoutY="27.0" mnemonicParsing="false" onAction="#menuPrincipal" prefHeight="62.0" prefWidth="63.0" text="Regresar" visible="false">
+         <font>
+            <Font name="Corbel" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="45.0" fitWidth="56.0" layoutX="661.0" layoutY="94.0" onMouseClicked="#ventanaEmpleados" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/empleado.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.juliolima.controller.EmpleadosController">
+   <children>
+      <ImageView fitHeight="593.0" fitWidth="949.0" layoutY="-5.0" onMouseClicked="#ventanaEmpleados" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondoEmpres.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtNumeroEmpleado" editable="false" layoutX="184.0" layoutY="119.0" prefHeight="25.0" prefWidth="133.0" />
+      <TextField fx:id="txtCodigoEmpleado" editable="false" layoutX="184.0" layoutY="73.0" prefHeight="25.0" prefWidth="133.0" />
+      <Label layoutX="47.0" layoutY="73.0" text="Código Empleado" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="119.0" text="Numero Empleado" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="390.0" layoutY="32.0" text=" EMPLEADOS" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="40.0" layoutY="506.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="42.0" prefWidth="133.0" text="NUEVO" />
+      <Button fx:id="btnEliminar" disable="true" layoutX="201.0" layoutY="506.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="42.0" prefWidth="133.0" text="ELIMINAR" />
+      <Button fx:id="btnEditar" disable="true" layoutX="600.0" layoutY="506.0" mnemonicParsing="false" onAction="#editar" prefHeight="42.0" prefWidth="139.0" text="EDITAR" />
+      <Button fx:id="btnReporte" disable="true" layoutX="761.0" layoutY="506.0" mnemonicParsing="false" onAction="#Reporte" prefHeight="42.0" prefWidth="139.0" text="REPORTE" />
+      <ImageView fitHeight="85.0" fitWidth="81.0" layoutX="820.0" layoutY="39.0" onMouseClicked="#ventanaTipoEmpleado" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icono.PNG" />
+         </image>
+      </ImageView>
+      <Button layoutX="669.0" layoutY="27.0" mnemonicParsing="false" onAction="#menuPrincipal" prefHeight="62.0" prefWidth="63.0" text="Regresar" visible="false">
+         <font>
+            <Font name="Corbel" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblEmpleados" layoutX="44.0" layoutY="280.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="214.0" prefWidth="873.0">
+         <columns>
+            <TableColumn fx:id="colCodigoEmpleado" prefWidth="71.0" text="Código E." />
+            <TableColumn fx:id="colNumeroEmpleado" prefWidth="45.0" text="No. " />
+            <TableColumn fx:id="colApellidosEmpleado" prefWidth="131.0" text="Apellidos " />
+            <TableColumn fx:id="colNombresEmpleado" prefWidth="134.0" text="Nombres  " />
+            <TableColumn fx:id="colDireccionEmpleado" prefWidth="141.0" text="Direccion" />
+            <TableColumn fx:id="colTelefonoContacto" prefWidth="114.0" text="telefono" />
+            <TableColumn fx:id="colGradoCocinero" prefWidth="114.0" text="gradoCocinero" />
+            <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="123.0" text="CódigoTipoEmpleado" />
+         </columns>
+      </TableView>
+      <Label layoutX="44.0" layoutY="164.0" prefHeight="24.0" prefWidth="126.0" text="Nombres Empleado" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="211.0" prefHeight="24.0" prefWidth="133.0" text="Apellidos Empleado" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombresEmpleado" editable="false" layoutX="181.0" layoutY="165.0" prefHeight="25.0" prefWidth="215.0" />
+      <TextField fx:id="txtApellidosEmpleado" editable="false" layoutX="181.0" layoutY="211.0" prefHeight="25.0" prefWidth="215.0" />
+      <Label layoutX="452.0" layoutY="119.0" text="Telefono Contacto" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="450.0" layoutY="77.0" text="DireccionEmpleado" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="454.0" layoutY="211.0" text="Código Empleado" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="451.0" layoutY="164.0" text="Grado Cocinero" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDireccionEmpleado" editable="false" layoutX="593.0" layoutY="77.0" prefHeight="25.0" prefWidth="215.0" />
+      <TextField fx:id="txtTelefonoContacto" editable="false" layoutX="593.0" layoutY="119.0" prefHeight="25.0" prefWidth="215.0" />
+      <TextField fx:id="txtGradoCocinero" editable="false" layoutX="593.0" layoutY="165.0" prefHeight="25.0" prefWidth="215.0" />
+      <ComboBox fx:id="cmbCodigoTipoEmpleado" layoutX="593.0" layoutY="211.0" prefHeight="25.0" prefWidth="227.0" />
+   </children>
+</AnchorPane>

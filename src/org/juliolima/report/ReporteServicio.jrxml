@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresa" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="86725c21-db7a-4bdb-9946-4cdde41946bb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codServicios" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ListarReporteServi($P{codServicios})]]>
+	</queryString>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionTipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="78" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="110" height="78" uuid="81ded420-48ef-4df1-94e6-be4468cc6ae9"/>
+				<imageExpression><![CDATA["C:\\Users\\julio\\OneDrive\\Documentos\\NetBeansProjects\\TonysKinal2016306\\src\\org\\juliolima\\images\\icono.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="98" y="36" width="118" height="30" uuid="84f89236-f675-4eb1-baae-2f59ac88b7c5"/>
+				<textElement>
+					<font fontName="Monotype Corsiva" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="341" height="41" uuid="236f8e67-b55b-4b63-a351-9ae8693b1411"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="24"/>
+				</textElement>
+				<text><![CDATA[REPORTE  ¨DEL SERVICIO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="40" width="572" height="1" forecolor="#330033" uuid="0ed00527-cb95-43f8-8207-d208802ba052"/>
+				<graphicElement>
+					<pen lineWidth="10.0" lineColor="#990033"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="69" width="572" height="1" uuid="5305781c-d6a8-4d71-a33a-79e093ba1c01"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Solid" lineColor="#990033"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="308" y="0" width="175" height="26" uuid="f356d3b3-5fc4-4098-97ff-5a1fc16e8269"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="50" width="100" height="20" uuid="a74b3810-4c49-4265-8b00-3453390e99e5"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="50" width="116" height="20" uuid="7874adf8-330f-4488-bd43-7b9e836a2fe8"/>
+				<textElement>
+					<font fontName="BagatrixFont"/>
+				</textElement>
+				<text><![CDATA[Cantidad:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="126" height="18" uuid="6f32a477-128b-40d9-a16e-a4c8f912f7b8"/>
+				<textElement>
+					<font fontName="BagatrixFont"/>
+				</textElement>
+				<text><![CDATA[Nombre de Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="156" height="20" uuid="01e778f9-81f8-42ad-bba9-4ae22e16d553"/>
+				<textElement>
+					<font fontName="BagatrixFont"/>
+				</textElement>
+				<text><![CDATA[Descripcion del  Plato]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="19" width="572" height="1" uuid="fc890049-421c-4005-986b-a29586aedfeb"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid" lineColor="#990033"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="186" y="1" width="1" height="19" uuid="3254c759-4967-47c4-92ec-4fc92ac4e561"/>
+				<graphicElement>
+					<pen lineWidth="3.25" lineColor="#990000"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="200" y="0" width="362" height="20" uuid="79daeb0d-c85d-42c1-a58d-3a591f7076de"/>
+				<textFieldExpression><![CDATA[$F{descripcionTipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="0" width="124" height="20" uuid="ee040384-e47a-449e-bd03-b6b7a140b600"/>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="186" y="1" width="1" height="19" uuid="1d2181e6-5657-4e5a-b75c-2d01dea579ac"/>
+				<graphicElement>
+					<pen lineWidth="3.25" lineColor="#990000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="19" width="572" height="1" uuid="bc47a4e3-4c50-4ff4-8227-e4e9ef404c36"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid" lineColor="#990033"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="17" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="562" height="54" uuid="90f852d3-a706-48f9-8672-124f166a6f35"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monotype Corsiva" size="17"/>
+				</textElement>
+				<text><![CDATA["Los que saben mucho se admiran de pocas cosas, en cambio, los que no saben nada, se admiran a sí mismos de todo"]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

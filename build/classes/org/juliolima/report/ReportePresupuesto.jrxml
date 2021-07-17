@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresa" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="86725c21-db7a-4bdb-9946-4cdde41946bb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CodEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ListarReporte($P{CodEmpresa} );]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPresupuesto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaSolicitud" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidadPresupuesto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServivio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="78" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="110" height="78" uuid="81ded420-48ef-4df1-94e6-be4468cc6ae9"/>
+				<imageExpression><![CDATA["C:\\Users\\julio\\OneDrive\\Documentos\\NetBeansProjects\\TonysKinal2016306\\src\\org\\juliolima\\images\\icono.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="98" y="36" width="118" height="30" uuid="84f89236-f675-4eb1-baae-2f59ac88b7c5"/>
+				<textElement>
+					<font fontName="Monotype Corsiva" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="341" height="41" uuid="236f8e67-b55b-4b63-a351-9ae8693b1411"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="24"/>
+				</textElement>
+				<text><![CDATA[REPORTE  ¨PRESUPUESTO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="40" width="572" height="1" forecolor="#330033" uuid="0ed00527-cb95-43f8-8207-d208802ba052"/>
+				<graphicElement>
+					<pen lineWidth="10.0" lineColor="#990033"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="399" y="1" width="202" height="40" uuid="4260d1e5-74a4-4072-b1cb-37087a1a3659"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="305" y="1" width="94" height="27" uuid="74763f3b-bfa6-4feb-9913-b67df2473792"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="14"/>
+				</textElement>
+				<text><![CDATA[DE EMPRESA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="100" height="20" uuid="aa5c475c-8718-4fc4-b6b6-59741d19d265"/>
+				<textElement>
+					<font fontName="BagatrixFont"/>
+				</textElement>
+				<text><![CDATA[Direccion:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="50" width="281" height="20" uuid="e3ddd808-cbf0-4e83-9a18-5affa33ae151"/>
+				<textElement>
+					<font fontName="BagatrixFont"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="103" width="572" height="1" uuid="5305781c-d6a8-4d71-a33a-79e093ba1c01"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Solid" lineColor="#990033"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="70" width="116" height="20" uuid="cc6ddb36-f9d7-43f0-b430-1713db64fac6"/>
+				<textElement>
+					<font fontName="BagatrixFont"/>
+				</textElement>
+				<text><![CDATA[Telefono :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="70" width="100" height="20" uuid="5c621047-9194-47ac-a152-dea39bcdc68a"/>
+				<textElement>
+					<font fontName="BagatrixFont"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="3" width="98" height="20" uuid="0988991d-b402-47b4-8ad3-5fd1b527fe75"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="8"/>
+				</textElement>
+				<text><![CDATA[fecha Solicitud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="3" width="66" height="20" uuid="e814558e-5ceb-4947-946f-404c95c9d32b"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="8"/>
+				</textElement>
+				<text><![CDATA[Presupuesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="3" width="85" height="20" uuid="44be36a1-0359-4bb4-a81f-8600365a77b4"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="8"/>
+				</textElement>
+				<text><![CDATA[Tipo de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="3" width="100" height="20" uuid="a82cd16f-1c97-4c01-bb04-9cb74f9adcc1"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="8"/>
+				</textElement>
+				<text><![CDATA[Hora deServicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="3" width="100" height="20" uuid="4275968f-60a4-4de3-ae9e-8e40b775a2f6"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="8"/>
+				</textElement>
+				<text><![CDATA[Lugar de Servicio]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="22" width="572" height="1" uuid="79afc989-a594-493c-b0a7-5b5c5b52b414"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Solid" lineColor="#990033"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="432" y="3" width="78" height="20" uuid="ba538c01-87b5-4b56-a587-84f9cdce35f6"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="8"/>
+				</textElement>
+				<text><![CDATA[fechaSolicitud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="3" width="100" height="20" uuid="2f731423-b145-436f-bdc8-b40e04db393b"/>
+				<textElement>
+					<font fontName="BagatrixFont" size="8"/>
+				</textElement>
+				<text><![CDATA[telefono Con.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField pattern="HH.mm.ss">
+				<reportElement x="249" y="0" width="93" height="20" uuid="3ad78a68-83a9-48eb-ad86-977b80fb1781"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="100" height="20" uuid="7b0da52b-f589-4e72-b0ec-429e583b30da"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="0" y="0" width="88" height="20" uuid="002a7692-9f53-4763-a441-4a305d0c0527"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaSolicitud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="0" width="100" height="20" uuid="c5f67df1-3947-4507-acb5-d8a6880fbc1b"/>
+				<textFieldExpression><![CDATA[$F{cantidadPresupuesto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="0" width="85" height="20" uuid="751cc034-163b-4066-b797-1169fb1b740b"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="73" y="0" width="66" height="20" uuid="9f43f83e-bc58-4cfc-b0a3-6f55dc28db15"/>
+				<textElement>
+					<font fontName="BagatrixFont"/>
+				</textElement>
+				<text><![CDATA[Q.]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="432" y="0" width="54" height="20" uuid="04c47f61-f626-471b-8a0e-c4acaaf1bb52"/>
+				<textFieldExpression><![CDATA[$F{fechaSolicitud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="0" width="62" height="20" uuid="24b9206c-b510-4d08-a223-5b0aeb8ae0fb"/>
+				<textFieldExpression><![CDATA[$F{telefonoContacto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="17" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="562" height="54" uuid="90f852d3-a706-48f9-8672-124f166a6f35"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monotype Corsiva" size="17"/>
+				</textElement>
+				<text><![CDATA["Los que saben mucho se admiran de pocas cosas, en cambio, los que no saben nada, se admiran a sí mismos de todo"]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

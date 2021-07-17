@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.juliolima.controller.PlatoController">
+   <children>
+      <ImageView fitHeight="593.0" fitWidth="949.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondoEmpres.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtCodigoPlato" editable="false" layoutX="157.0" layoutY="131.0" prefHeight="25.0" prefWidth="133.0" />
+      <TextField fx:id="txtCantidad" editable="false" layoutX="157.0" layoutY="177.0" prefHeight="25.0" prefWidth="133.0" promptText="00000" />
+      <TextField fx:id="txtNombrePlato" editable="false" layoutX="157.0" layoutY="224.0" prefHeight="25.0" prefWidth="220.0" />
+      <TextField fx:id="txtDescripcionPlato" editable="false" layoutX="541.0" layoutY="132.0" prefHeight="25.0" prefWidth="371.0" />
+      <TextField fx:id="txtPrecioPlato" editable="false" layoutX="541.0" layoutY="177.0" prefHeight="25.0" prefWidth="227.0" promptText="0000.00" />
+      <ComboBox fx:id="cmbCodigoTipoPlato" layoutX="541.0" layoutY="224.0" prefHeight="25.0" prefWidth="227.0" />
+      <Label layoutX="58.0" layoutY="132.0" text="Código Plato" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="178.0" text="Cantidad" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="390.0" layoutY="32.0" prefHeight="68.0" prefWidth="139.0" text="PLATOS" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="39.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="40.0" layoutY="506.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="42.0" prefWidth="133.0" text="NUEVO" />
+      <Button fx:id="btnEliminar" disable="true" layoutX="201.0" layoutY="506.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="42.0" prefWidth="133.0" text="ELIMINAR" />
+      <Button fx:id="btnEditar" disable="true" layoutX="600.0" layoutY="506.0" mnemonicParsing="false" onAction="#editar" prefHeight="42.0" prefWidth="139.0" text="EDITAR" />
+      <Button fx:id="btnReporte" disable="true" layoutX="761.0" layoutY="506.0" mnemonicParsing="false" onAction="#Rerporte" prefHeight="42.0" prefWidth="139.0" text="REPORTE" />
+      <ImageView fitHeight="85.0" fitWidth="81.0" layoutX="820.0" layoutY="39.0" onMouseClicked="#ventanaTipoPlato" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icono.PNG" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblPlatos" layoutX="55.0" layoutY="276.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="214.0" prefWidth="840.0">
+         <columns>
+            <TableColumn fx:id="colCodigoPlato" prefWidth="83.0" text="Código Plato" />
+            <TableColumn fx:id="colCantidad" minWidth="2.0" prefWidth="63.0" text="Cantidad" />
+            <TableColumn fx:id="colNombrePlato" prefWidth="179.0" text="NombrePlato" />
+            <TableColumn fx:id="colDescripcionPlato" prefWidth="292.0" text="Descripcion Plato" />
+            <TableColumn fx:id="colPrecioPlato" minWidth="0.0" prefWidth="114.0" text="Precio Plato" />
+            <TableColumn fx:id="colCodigoTipoPlatos" prefWidth="108.0" text="Código TipoPlato" />
+         </columns>
+      </TableView>
+      <Label layoutX="58.0" layoutY="224.0" prefHeight="24.0" prefWidth="126.0" text="Nombre Plato" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="408.0" layoutY="132.0" prefHeight="24.0" prefWidth="133.0" text="Descripcion Plato" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="408.0" layoutY="178.0" text="Precio Plato" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="408.0" layoutY="224.0" text="Código Tipo Plato" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

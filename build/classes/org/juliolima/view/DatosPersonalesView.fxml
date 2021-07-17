@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.juliolima.controller.DatosPersonalesController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="503.0" layoutX="-7.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="478.0" fitWidth="496.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Datos.png" />
+         </image>
+      </ImageView>
+      <Text fontSmoothingType="LCD" layoutX="179.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Julio Samuel Isaac Lima" wrappingWidth="221.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="175.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2016306" wrappingWidth="83.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="175.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IN5AV" wrappingWidth="62.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="195.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="jlima-2016306@kinal.edu.gt" wrappingWidth="238.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="178.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="221.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="178.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="221.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="63.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" wrappingWidth="83.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="84.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carné" wrappingWidth="72.13671875">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="84.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código" wrappingWidth="62.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="77.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" wrappingWidth="56.13671875">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="189.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datos del Programador" wrappingWidth="250.13671875">
+         <font>
+            <Font name="BagatrixFont" size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="49.0" fitWidth="56.0" layoutX="28.0" layoutY="29.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icono.PNG" />
+         </image>
+      </ImageView>
+      <Button layoutX="35.0" layoutY="33.0" mnemonicParsing="false" onAction="#menuPrincipal" prefHeight="39.0" prefWidth="42.0" text="Regresar" textOverrun="CENTER_ELLIPSIS" visible="false">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="106.0" fitWidth="94.0" layoutX="338.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Foto.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
